@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BharatYatra - Find Your Perfect Destination</title>
+    <link href="./src/output.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="leaf-decoration left">
+            <img src="https://via.placeholder.com/200x100" alt="" aria-hidden="true">
+        </div>
+        <div class="leaf-decoration right">
+            <img src="https://via.placeholder.com/200x100" alt="" aria-hidden="true">
+        </div>
+        <div class="container">
+            <div class="flex items-center justify-between py-3">
+                <div class="flex items-center">
+                    <a href="#" class="logo">
+                        <span class="logo-trip">Bharat</span><span class="logo-time">Yatra</span>
+                    </a>
+                    <nav class="ml-10">
+                        <ul>
+                            <li><a href="#">Holiday Packages</a></li>
+                            <li><a href="#">Flights</a></li>
+                            <li><a href="#">Hotels</a></li>
+                            <li><a href="#">Activities</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="header-actions">
+                    <div class="flex items-center gap-6">
+                        <button class="p-2 text-slate-600 hover:text-teal-600">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        <button class="flex items-center text-slate-600 hover:text-teal-600">
+                            <i class="fas fa-user mr-2"></i>
+                            <span>Sign in</span>
+                        </button>
+                        <button class="btn btn-primary">
+                            Book Now
+                        </button>
+                    </div>
+                </div>
+
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="#" class="py-2 block">Holiday Packages</a></li>
+                <li><a href="#" class="py-2 block">Flights</a></li>
+                <li><a href="#" class="py-2 block">Hotels</a></li>
+                <li><a href="#" class="py-2 block">Activities</a></li>
+                <li class="pt-2 border-t mt-2">
+                    <button class="flex items-center py-2 text-slate-600">
+                        <i class="fas fa-user mr-2"></i>
+                        <span>Sign in</span>
+                    </button>
+                </li>
+                <li class="mt-2">
+                    <button class="btn btn-primary w-full">
+                        Book Now
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg">
+            <img src="https://images.unsplash.com/photo-1485470733090-0aae1788d5af?q=80&w=1517&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Tropical beach scene">
+        </div>
+        <div class="container hero-content">
+            <div class="max-w-2xl">
+                <h1 class="hero-title">
+                    <span class="white">What Is Your</span><br>
+                    <span class="teal">Destination?</span>
+                </h1>
+
+                <!-- Search Form -->
+                <div class="search-form">
+                    <div class="search-form-row">
+                        <div class="form-group">
+                            <label for="from">From</label>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <select id="from" class="form-control">
+                                <option>Mumbai</option>
+                                <option>Delhi</option>
+                                <option>Bangalore</option>
+                                <option>Chennai</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="to">To</label>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <select id="to" class="form-control">
+                                <option>Goa</option>
+                                <option>Jaipur</option>
+                                <option>Kerala</option>
+                                <option>Agra</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="depart">Depart</label>
+                            <i class="fas fa-calendar"></i>
+                            <input type="text" id="depart" class="form-control" value="Fri, 23 Mar">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="return">Return</label>
+                            <i class="fas fa-calendar"></i>
+                            <input type="text" id="return" class="form-control" value="Mon, 3 Apr">
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary w-full">
+                        Search for flights
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Decorative element - person with suitcase -->
+        <!-- <div class="hero-person">
+            <img src="https://via.placeholder.com/300x350" alt="Person with suitcase on vacation">
+        </div> -->
+    </section>
+
+    <!-- Holiday Deals Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Best Indian Holiday Deals</h2>
+
+            <!-- Categories -->
+            <div class="categories">
+                <button class="category-btn active">All</button>
+                <button class="category-btn">Featured</button>
+                <button class="category-btn">Recommended</button>
+                <button class="category-btn">Hill Stations</button>
+                <button class="category-btn">Beaches</button>
+                <button class="category-btn">Heritage</button>
+                <button class="category-btn">Adventure</button>
+                <button class="category-btn">Wildlife</button>
+                <button class="category-btn">Pilgrimage</button>
+            </div>
+
+            <!-- Deal cards -->
+            <div class="deals-grid">
+                <!-- Deal Card 1 -->
+                <div class="deal-card">
+                    <div class="deal-image">
+                        <img src="https://images.unsplash.com/photo-1602589081234-ea5e74005804?q=80&w=1385&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Goa Beach">
+                        <span class="deal-tag">15% off</span>
+                        <button class="favorite-btn" data-id="1">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+
+                    <div class="deal-content">
+                        <h3 class="deal-title">Goa Beach Getaway</h3>
+                        <p class="deal-location">North Goa to South Goa</p>
+
+                        <div class="deal-info">
+                            <div class="deal-info-item">
+                                <i class="far fa-clock"></i>
+                                <span>5 days</span>
+                            </div>
+                            <div class="deal-info-item">
+                                <i class="fas fa-users"></i>
+                                <span>Up to 10 people</span>
+                            </div>
+                        </div>
+
+                        <div class="deal-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-score">4.9</span>
+                            <span class="rating-count">(523)</span>
+                        </div>
+
+                        <div class="deal-price">
+                            <div class="price">
+                                <span class="original-price">₹50,000</span>
+                                <span class="sale-price">₹42,500</span>
+                            </div>
+                            <button class="explore-btn">
+                                Explore Now
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Deal Card 2 -->
+                <div class="deal-card">
+                    <div class="deal-image">
+                        <img src="https://images.unsplash.com/flagged/photo-1570732988278-968808ba2dcc?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Manali Trip">
+                        <span class="deal-tag">10% off</span>
+                        <button class="favorite-btn" data-id="2">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+
+                    <div class="deal-content">
+                        <h3 class="deal-title">Manali Adventure</h3>
+                        <p class="deal-location">Delhi to Manali</p>
+
+                        <div class="deal-info">
+                            <div class="deal-info-item">
+                                <i class="far fa-clock"></i>
+                                <span>6 days</span>
+                            </div>
+                            <div class="deal-info-item">
+                                <i class="fas fa-users"></i>
+                                <span>Up to 15 people</span>
+                            </div>
+                        </div>
+
+                        <div class="deal-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-score">4.8</span>
+                            <span class="rating-count">(432)</span>
+                        </div>
+
+                        <div class="deal-price">
+                            <div class="price">
+                                <span class="original-price">₹40,000</span>
+                                <span class="sale-price">₹36,000</span>
+                            </div>
+                            <button class="explore-btn">
+                                Explore Now
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Deal Card 3 -->
+                <div class="deal-card">
+                    <div class="deal-image">
+                        <img src="https://images.unsplash.com/photo-1506461883276-594a12b11cf3?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Kerala Backwaters">
+                        <span class="deal-tag">20% off</span>
+                        <button class="favorite-btn" data-id="3">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+
+                    <div class="deal-content">
+                        <h3 class="deal-title">Kerala Backwaters</h3>
+                        <p class="deal-location">Alleppey to Kumarakom</p>
+
+                        <div class="deal-info">
+                            <div class="deal-info-item">
+                                <i class="far fa-clock"></i>
+                                <span>4 days</span>
+                            </div>
+                            <div class="deal-info-item">
+                                <i class="fas fa-users"></i>
+                                <span>Up to 8 people</span>
+                            </div>
+                        </div>
+
+                        <div class="deal-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-score">4.7</span>
+                            <span class="rating-count">(364)</span>
+                        </div>
+
+                        <div class="deal-price">
+                            <div class="price">
+                                <span class="original-price">₹60,000</span>
+                                <span class="sale-price">₹48,000</span>
+                            </div>
+                            <button class="explore-btn">
+                                Explore Now
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button class="btn btn-outline show-more-btn">
+                    Show more
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Popular Cities Section -->
+    <section class="section bg-white">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Popular Indian Destinations</h2>
+                <div class="flex items-center justify-center mt-2">
+                    <span class="section-subtitle">Explore beautiful places across India</span>
+                    <button
+                        class="ml-4 px-4 py-2 bg-slate-800 text-white rounded-full text-sm hover:bg-slate-700 transition">
+                        Show all
+                    </button>
+                </div>
+            </div>
+
+            <div class="cities-grid">
+                <!-- City Card 1 - Goa -->
+                <div class="city-card large">
+                    <img src="https://images.unsplash.com/photo-1605538108568-7f0d77a214c1?q=80&w=1528&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Beach view in Goa">
+                    <div class="city-overlay"></div>
+                    <h3 class="city-name">Goa</h3>
+                </div>
+
+                <!-- City Card 2 - Manali -->
+                <div class="city-card">
+                    <img src="https://images.unsplash.com/photo-1510987216810-99a82775a158?q=80&w=1482&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Snowy mountains in Manali">
+                    <div class="city-overlay"></div>
+                    <h3 class="city-name">Manali</h3>
+                </div>
+
+                <!-- City Card 3 - Kerala -->
+                <div class="city-card">
+                    <img src="https://images.unsplash.com/photo-1597735881932-d9664c9bbcea?q=80&w=1366&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Backwaters of Kerala">
+                    <div class="city-overlay"></div>
+                    <h3 class="city-name">Kerala</h3>
+                </div>
+
+                <!-- City Card 4 - Jaipur -->
+                <div class="city-card">
+                    <img src="https://images.unsplash.com/photo-1603262110263-fb0112e7cc33?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Historic architecture in Jaipur">
+                    <div class="city-overlay"></div>
+                    <h3 class="city-name">Jaipur</h3>
+                </div>
+
+                <!-- City Card 5 - Rishikesh -->
+                <div class="city-card">
+                    <img src="https://images.unsplash.com/photo-1607406374368-809f8ec7f118?q=80&w=1473&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="River and mountains in Rishikesh">
+                    <div class="city-overlay"></div>
+                    <h3 class="city-name">Rishikesh</h3>
+                </div>
+
+                <!-- City Card 6 - Mumbai -->
+                <div class="city-card">
+                    <img src="https://images.unsplash.com/photo-1703486788938-c3645aaef7ac?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Cityscape of Mumbai">
+                    <div class="city-overlay"></div>
+                    <h3 class="city-name">Mumbai</h3>
+                </div>
+            </div>
+
+            <div class="text-center mt-8">
+                <button
+                    class="btn btn-outline px-4 py-2 border-2 border-slate-800 text-slate-800 rounded-full hover:bg-slate-800 hover:text-white transition">
+                    Show more
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Book with Confidence Section -->
+    <section class="section bg-sky-50">
+        <div class="container">
+            <h2 class="section-title text-center mb-10">Book with confidence</h2>
+
+            <div class="benefits">
+                <div class="benefit">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="benefit-title">Worry free guarantee</h3>
+                    <p class="benefit-desc">We guarantee your experience will be enjoyable</p>
+                </div>
+
+                <div class="benefit">
+                    <div class="benefit-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3 class="benefit-title">Expert service</h3>
+                    <p class="benefit-desc">Our travel experts are with you through every step</p>
+                </div>
+
+                <div class="benefit">
+                    <div class="benefit-icon">
+                        <i class="far fa-clock"></i>
+                    </div>
+                    <h3 class="benefit-title">Flexible booking</h3>
+                    <p class="benefit-desc">We understand plans change. We offer flexible cancellation</p>
+                </div>
+
+                <div class="benefit">
+                    <div class="benefit-icon">
+                        <i class="far fa-credit-card"></i>
+                    </div>
+                    <h3 class="benefit-title">Secure payment</h3>
+                    <p class="benefit-desc">Your payments are secured with industry-standard encryption</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Travel Libraries Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Latest Travel Destinations in India</h2>
+
+            <div class="articles-grid">
+                <div class="article-card">
+                    <div class="article-image">
+                        <img src="https://plus.unsplash.com/premium_vector-1719211585065-cdb246dd8338?q=80&w=1444&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Taj Mahal">
+                        <span class="article-category">Agra</span>
+                    </div>
+
+                    <div class="article-content">
+                        <h3 class="article-title">Witness the majestic beauty of the Taj Mahal at sunrise</h3>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <div class="article-image">
+                        <img src="https://media.istockphoto.com/id/482557081/photo/hawa-mahal-jaipur-india.jpg?s=1024x1024&w=is&k=20&c=NVM5bBGtxyrKv8zNKBfcgdlNHfkYkEa-LADVjQXLV3Q="
+                            alt="Hawa Mahal">
+                        <span class="article-category">Jaipur</span>
+                    </div>
+
+                    <div class="article-content">
+                        <h3 class="article-title">Explore the vibrant streets and royal palaces of Jaipur</h3>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1601701119495-d6e39b664001?q=80&w=1528&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Goa Beach">
+                        <span class="article-category">Goa</span>
+                    </div>
+
+                    <div class="article-content">
+                        <h3 class="article-title">Relax on the sun-kissed beaches of Goa and enjoy the nightlife</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-8">
+                <button class="btn btn-dark">
+                    Explore more
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title text-center mb-2">What travelers say about us</h2>
+            <p class="text-gray-500 text-center mb-10">87% travelers rated their experience as excellent</p>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-quote">"Booking my trip with this platform was so simple. Everything was
+                        perfectly arranged, and my vacation turned out amazing!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"></div>
+                        <div class="author-info">
+                            <h4>Roshan Singh Chauhan</h4>
+                            <p>Frequent Traveler</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-quote">"The best travel experience ever! The recommendations and itineraries
+                        were spot on, making our trip unforgettable."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"></div>
+                        <div class="author-info">
+                            <h4>Sumit Singh</h4>
+                            <p>Adventure Seeker</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-quote">"I've been using this travel service for years — the ease of booking
+                        and the amazing customer support keep me coming back."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"></div>
+                        <div class="author-info">
+                            <h4>Nitish Singh</h4>
+                            <p>Globe Trotter</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-quote">"I've been using this travel service for years — the ease of booking
+                        and the amazing customer support keep me coming back."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"></div>
+                        <div class="author-info">
+                            <h4>Vinay Chauhan</h4>
+                            <p>Globe Trotter</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container newsletter-container">
+            <div class="newsletter-card">
+                <!-- Decorative elements - travel images -->
+                <div class="newsletter-image top-left">
+                    <img src="https://plus.unsplash.com/premium_vector-1718377910844-b328ef03d443?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="" aria-hidden="true">
+                </div>
+
+                <div class="newsletter-image bottom-right">
+                    <img src="https://plus.unsplash.com/premium_vector-1718377910831-3be7730af96e?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="" aria-hidden="true">
+                </div>
+
+                <h2 class="newsletter-title">Sign Up for Our Travel E-Store</h2>
+                <p class="newsletter-subtitle">Get 10% OFF Your Next Travel Booking</p>
+
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" class="newsletter-input" />
+                    <button class="btn btn-primary">
+                        Sign Up Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo mb-4 inline-block">
+                        <span class="logo-trip">Bharat</span><span class="logo-time">Yatra</span>
+                    </a>
+                    <p>
+                        Bharat Yatra helps you discover and book the best travel experiences across incredible India.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="footer-title">Popular Destinations</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">Goa</a></li>
+                        <li><a href="#" class="footer-link">Manali</a></li>
+                        <li><a href="#" class="footer-link">Kerala</a></li>
+                        <li><a href="#" class="footer-link">Jaipur</a></li>
+                        <li><a href="#" class="footer-link">Varanasi</a></li>
+                        <li><a href="#" class="footer-link">Rishikesh</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="footer-title">Travel Styles</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">Solo Trips</a></li>
+                        <li><a href="#" class="footer-link">Couple Retreats</a></li>
+                        <li><a href="#" class="footer-link">Family Vacations</a></li>
+                        <li><a href="#" class="footer-link">Group Tours</a></li>
+                        <li><a href="#" class="footer-link">Luxury Escapes</a></li>
+                        <li><a href="#" class="footer-link">Budget Travels</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="footer-title">Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">About Us</a></li>
+                        <li><a href="#" class="footer-link">Careers</a></li>
+                        <li><a href="#" class="footer-link">Blog</a></li>
+                        <li><a href="#" class="footer-link">Press</a></li>
+                        <li><a href="#" class="footer-link">Gift Cards</a></li>
+                        <li><a href="#" class="footer-link">Travel Magazine</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© <span id="currentYear"></span> Bharat Yatra. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+
+            // Change icon based on menu state
+            const icon = mobileMenuBtn.querySelector('i');
+            if (mobileMenu.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Category buttons
+        const categoryBtns = document.querySelectorAll('.category-btn');
+        categoryBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                categoryBtns.forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                btn.classList.add('active');
+            });
+        });
+
+        // Favorite buttons
+        const favoriteBtns = document.querySelectorAll('.favorite-btn');
+        favoriteBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                btn.classList.toggle('active');
+                const icon = btn.querySelector('i');
+                if (btn.classList.contains('active')) {
+                    icon.classList.remove('far');
+                    icon.classList.add('fas');
+                } else {
+                    icon.classList.remove('fas');
+                    icon.classList.add('far');
+                }
+            });
+        });
+
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Simulated date picker functionality
+        const dateInputs = document.querySelectorAll('#depart, #return');
+        dateInputs.forEach(input => {
+            input.addEventListener('focus', () => {
+                // In a real implementation, this would show a date picker
+                console.log('Date picker would show here');
+            });
+        });
+    </script>
+</body>
+
+</html>
