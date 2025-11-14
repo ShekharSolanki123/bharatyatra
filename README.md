@@ -31,10 +31,11 @@ This project showcases a stunning, responsive front-end design suitable for trav
 
 > ⚠️ Add your screenshots inside a folder like `/assets/images/` then replace these image links.
 
-![App Screenshot](assets/images/screenshot1.png)
+https://ibb.co/1JJVxJ8t)
 ![App Screenshot](assets/images/screenshot2.png)
 
 ---
 
 ## 📂 Project Structure
+
 
